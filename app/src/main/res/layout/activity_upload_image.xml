@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/upload_image_iv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+
+    <EditText
+        android:id="@+id/caption_text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/upload_image_iv"
+        android:hint="Enter your text here"
+        />
+
+    <Button
+        android:id="@+id/upload_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/caption_text_tv"
+        android:text="upload"
+        />
+
+
+
+</RelativeLayout>

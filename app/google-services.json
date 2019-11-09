@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "403327074352",
+    "firebase_url": "https://xymmetryprototype0.firebaseio.com",
+    "project_id": "xymmetryprototype0",
+    "storage_bucket": "xymmetryprototype0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403327074352:android:2624378a7dbd6c47c4edf5",
+        "android_client_info": {
+          "package_name": "com.example.xymmetryprototype_0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403327074352-2r15tkko7v8srrgiq9rtn793af8osn77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xymmetryprototype_0",
+            "certificate_hash": "8ecdc29fa5138e35ee85c29935262eee772faa7a"
+          }
+        },
+        {
+          "client_id": "403327074352-qrm4khggstq7i8nhvpuifag66tq24pod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWrvaM75lrB0xtjRz4YEyeHgmI0oaGgRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403327074352-qrm4khggstq7i8nhvpuifag66tq24pod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
