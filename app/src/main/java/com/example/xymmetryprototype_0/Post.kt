@@ -1,3 +1,3 @@
 package com.example.xymmetryprototype_0
 
-data class Post(val imgUrl: String, val caption: String)
+data class Post(var imgUrl: String, val caption: String)

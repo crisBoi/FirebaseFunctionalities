@@ -38,7 +38,7 @@ class UploadImageActivity: AppCompatActivity() {
         upload_btn.setOnClickListener {
 
             val post = Post("imgUrl", caption_text_tv.text.toString())
-            upload.uploadImage(post)
+            upload.uploadImage(post, upload_image_iv, "hello")
         }
     }
 
