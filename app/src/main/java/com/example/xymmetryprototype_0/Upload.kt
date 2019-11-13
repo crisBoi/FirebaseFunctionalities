@@ -63,17 +63,22 @@ class Upload(
                 }
             }
 
+
             spcaeRef.downloadUrl
         }.addOnCompleteListener { task ->
             if (task.isSuccessful) {
+
                 val downloadUri = task.result
+
+                //URL
+                val url = downloadUri!!.result
 
             } else {
                 //handle failure here
             }
         }
 
-        
+
 
 
 
