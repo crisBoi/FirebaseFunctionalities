@@ -18,7 +18,7 @@ public class Login(
 
     public fun getCurrentUser(): String? {
         val currentUser = auth.currentUser
-        return if (currentUser != null) currentUser.displayName
+        return if (currentUser != null) currentUser.email!!.replace("@.","_")
         else null
     }
 

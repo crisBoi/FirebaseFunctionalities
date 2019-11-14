@@ -18,6 +18,7 @@ class UploadImageActivity: AppCompatActivity() {
 
     val SELECT_PIC = 123
     val upload = Upload()
+    val login = Login()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,8 @@ class UploadImageActivity: AppCompatActivity() {
         upload_btn.setOnClickListener {
 
             val post = Post("imgUrl", caption_text_tv.text.toString())
-            upload.uploadImage(post, upload_image_iv, "hello")
+            val name = login.getCurrentUser() + System.currentTimeMillis().toString()
+            val thread = Thread(Runnable { kotlin.run { upload.uploadImage(post, upload_image_iv, name) } }).start()
         }
     }
 
