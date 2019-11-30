@@ -25,6 +25,7 @@ public class Login(
     public fun signInWithGoogle(): Intent = AuthUI.getInstance().
         createSignInIntentBuilder().
         setAvailableProviders(providers).
+        setIsSmartLockEnabled(false).
         build()
 
     public fun validateGoogleSignIn(requestCode: Int, resultCode: Int): Boolean {
