@@ -11,14 +11,18 @@ import kotlinx.android.synthetic.main.activity_upload_image.*
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
+import android.widget.Toast
 
 
 class UploadImageActivity: AppCompatActivity() {
 
+
+
     val SELECT_PIC = 123
     val upload = Upload()
     val login = Login()
+    var uri: Uri? = null
+    lateinit var selectedImageUri : Uri
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +44,14 @@ class UploadImageActivity: AppCompatActivity() {
 
             val post = Post("imgUrl", caption_text_tv.text.toString())
             val name = login.getCurrentUser() + System.currentTimeMillis().toString()
-            val thread = Thread(Runnable { kotlin.run { upload.uploadImage(post, upload_image_iv, name) } }).start()
+//            val thread = Thread(Runnable { kotlin.run { upload.uploadImage(post, upload_image_iv, name) } }).start()
+
+
+//            upload.uploadPost(post, caption_text_tv.text.toString())
+//            upload.uploadImage(post, uri a, caption_text_tv.text.toString())
+
+            upload.uploadImage(post, selectedImageUri, caption_text_tv.text.toString())
+
         }
     }
 
@@ -50,10 +61,14 @@ class UploadImageActivity: AppCompatActivity() {
 
         if (requestCode == SELECT_PIC) {
             if (resultCode == Activity.RESULT_OK) {
-                val selectedImageUri : Uri = data!!.data
+                selectedImageUri = data!!.data
                 val selectedImagePath = selectedImageUri.path
 
+                val post = Post("imgUrl", caption_text_tv.text.toString())
+//                Thread(Runnable { kotlin.run {  upload.uploadImage(post, selectedImageUri, caption_text_tv.text.toString())} }).start()
+
                 setImage(selectedImageUri)
+
             }
         }
     }
@@ -63,5 +78,8 @@ class UploadImageActivity: AppCompatActivity() {
         val bitmap: Bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, uri)
         upload_image_iv.setImageBitmap(bitmap)
     }
+
+
+
 }
 
