@@ -1,4 +1,4 @@
-package com.example.xymmetryprototype_0.firebaseCalls
+package com.example.xymmetryprototype_0.helper
 
 import com.google.firebase.database.IgnoreExtraProperties
 

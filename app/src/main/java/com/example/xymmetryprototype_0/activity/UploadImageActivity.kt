@@ -9,7 +9,7 @@ import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_upload_image.*
 import com.example.xymmetryprototype_0.firebaseCalls.Login
-import com.example.xymmetryprototype_0.firebaseCalls.Post
+import com.example.xymmetryprototype_0.helper.Post
 import com.example.xymmetryprototype_0.R
 import com.example.xymmetryprototype_0.firebaseCalls.Upload
 

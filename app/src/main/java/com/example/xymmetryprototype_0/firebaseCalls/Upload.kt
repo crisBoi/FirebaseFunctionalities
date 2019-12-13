@@ -3,6 +3,7 @@ package com.example.xymmetryprototype_0.firebaseCalls
 
 import android.net.Uri
 import android.util.Log
+import com.example.xymmetryprototype_0.helper.Post
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
@@ -79,10 +80,8 @@ class Upload(
     }
 
 
-    fun dataChangeListener(): DatabaseReference {
-        val feedReference : DatabaseReference = databseRef.child("posts")
-        return feedReference
-    }
+    fun dataChangeListener(): DatabaseReference = databseRef.child("posts")
+
 
 
 
