@@ -1,14 +1,17 @@
-package com.example.xymmetryprototype_0
+package com.example.xymmetryprototype_0.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.xymmetryprototype_0.firebaseCalls.Login
+import com.example.xymmetryprototype_0.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginPageActivity : AppCompatActivity() {
 
-    val login : Login = Login()
+    val login : Login =
+        Login()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,10 +1,9 @@
-package com.example.xymmetryprototype_0
+package com.example.xymmetryprototype_0.firebaseCalls
 
 import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import com.firebase.ui.auth.AuthUI
-import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
 
 public class Login(

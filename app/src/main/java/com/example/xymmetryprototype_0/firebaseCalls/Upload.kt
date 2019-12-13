@@ -1,15 +1,9 @@
-package com.example.xymmetryprototype_0
+package com.example.xymmetryprototype_0.firebaseCalls
 
 
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.util.Log
-import android.widget.ImageView
-import android.widget.Toast
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
-import com.google.android.gms.tasks.Tasks
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -17,10 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
-import java.io.ByteArrayOutputStream
-import java.io.File
 import java.lang.Exception
-import java.net.URL
 
 class Upload(
     private val databseRef: DatabaseReference = FirebaseDatabase.getInstance().reference,
@@ -61,19 +52,6 @@ class Upload(
 
 
         val spcaeRef = storageRef.child("images/posts/${imgName}.jpg")
-
-
-        /*imageView.isDrawingCacheEnabled = true
-        imageView.buildDrawingCache()
-
-        val bitmap = (imageView.drawable as BitmapDrawable).bitmap
-        val baos = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-
-        val data = baos.toByteArray()*/
-
-
-//        val uploadTask = spcaeRef.putBytes(data)
         val file = uri
 
         val uploadTask = spcaeRef.putFile(file)
@@ -98,6 +76,12 @@ class Upload(
         }
 
 
+    }
+
+
+    fun dataChangeListener(): DatabaseReference {
+        val feedReference : DatabaseReference = databseRef.child("posts")
+        return feedReference
     }
 
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/images_iv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/caption_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/images_iv"
+        android:text="asdasdasdsdsad asdad asdsa dad as da da d"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="4"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>

@@ -41,6 +41,9 @@ dependencies {
 
     //auth UI
     implementation 'com.firebaseui:firebase-ui-auth:4.3.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
 //    implementation 'com.google.firebase:firebase-database:19.2.0'
 //    implementation 'com.google.firebase:firebase-analytics:17.2.1'
 

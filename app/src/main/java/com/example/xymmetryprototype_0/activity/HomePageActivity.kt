@@ -1,10 +1,10 @@
-package com.example.xymmetryprototype_0
+package com.example.xymmetryprototype_0.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.xymmetryprototype_0.firebaseCalls.Login
+import com.example.xymmetryprototype_0.R
 import kotlinx.android.synthetic.main.activity_home_page.*
 
 class HomePageActivity : AppCompatActivity(){
@@ -28,6 +28,11 @@ class HomePageActivity : AppCompatActivity(){
             val intent = Intent(this, UploadImageActivity::class.java)
             startActivity(intent)
 
+        }
+
+        check_feed_btn.setOnClickListener {
+            val intent = Intent(this, FeedActivity::class.java)
+            startActivity(intent)
         }
     }
 }
